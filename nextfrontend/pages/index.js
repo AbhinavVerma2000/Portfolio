@@ -155,23 +155,23 @@ export default function Home({ skills, projects, profile }) {
                     </div>
                   </div>
                   <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                    <a href={profile.facebook} target="_blank">
+                    <Link to={profile.facebook} target="_blank">
                       <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
-                    </a>
+                    </Link>
 
-                    <a href={profile.linkedin} target="_blank" className="pl-4">
+                    <Link to={profile.linkedin} target="_blank" className="pl-4">
                       <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-                    </a>
-                    <a
-                      href={profile.instagram}
+                    </Link>
+                    <Link
+                      to={profile.instagram}
                       target="_blank"
                       className="pl-4"
                     >
                       <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-                    </a>
-                    <a href={profile.github} target="_blank" className="pl-4">
+                    </Link>
+                    <Link to={profile.github} target="_blank" className="pl-4">
                       <i className="bx bxl-github text-2xl text-white hover:text-yellow"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -201,19 +201,19 @@ export default function Home({ skills, projects, profile }) {
                   </div>
                 </div>
                 <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                  <a href={profile.facebook} target="_blank">
+                  <Link to={profile.facebook} target="_blank">
                     <i className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
-                  </a>
+                  </Link>
 
-                  <a href={profile.linkedin} target="_blank" className="pl-4">
+                  <Link to={profile.linkedin} target="_blank" className="pl-4">
                     <i className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
-                  </a>
-                  <a href={profile.instagram} target="_blank" className="pl-4">
+                  </Link>
+                  <Link to={profile.instagram} target="_blank" className="pl-4">
                     <i className="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
-                  </a>
-                  <a href={profile.github} target="_blank" className="pl-4">
+                  </Link>
+                  <Link to={profile.github} target="_blank" className="pl-4">
                     <i className="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -339,9 +339,9 @@ export default function Home({ skills, projects, profile }) {
           <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
             {projects.map((project) => {
               return (
-                <a
+                <Link
                   key={project.title}
-                  href={project.url} target="_blank"
+                  to={project.url} target="_blank"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
                   <img
@@ -349,7 +349,7 @@ export default function Home({ skills, projects, profile }) {
                     className="w-full shadow"
                     alt="portfolio image"
                   />
-                </a>
+                </Link>
               );
             })}
           </div>
@@ -396,7 +396,7 @@ export default function Home({ skills, projects, profile }) {
                 required
               />
             </div>
-            <textarea
+            <textareLink
               className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
               placeholder="Message"
               id="message"
@@ -404,7 +404,7 @@ export default function Home({ skills, projects, profile }) {
               rows="10"
               value={message} onChange={(e) => setMessage(e.target.value)}
               required
-            ></textarea>
+            ></textareLink>
             <button className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20">
               Send
               <i className="bx bx-chevron-right relative -right-2 text-3xl"></i>
@@ -431,19 +431,19 @@ export default function Home({ skills, projects, profile }) {
             Developed and Maintained by {profile.name} 2024
           </p>
           <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-            <a href={profile.facebook} target="_blank">
+            <Link to={profile.facebook} target="_blank">
               <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
-            </a>
+            </Link>
 
-            <a href={profile.linkedin} target="_blank" className="pl-4">
+            <Link to={profile.linkedin} target="_blank" className="pl-4">
               <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href={profile.instagram} target="_blank" className="pl-4">
+            </Link>
+            <Link to={profile.instagram} target="_blank" className="pl-4">
               <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
-            </a>
-            <a href={profile.github} target="_blank" className="pl-4">
+            </Link>
+            <Link to={profile.github} target="_blank" className="pl-4">
               <i className="bx bxl-github text-2xl text-white hover:text-yellow"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
