@@ -5,6 +5,7 @@ import Script from "next/script";
 import imageUrlBuilder from "@sanity/image-url";
 import NavBar from "../components/NavBar";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
 
 export default function Home({ skills, projects, profile }) {
   const client = createClient({
