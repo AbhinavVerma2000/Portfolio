@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/head";
+import Image from "next/image";
 
 
 const NavBar = ({ profile }) => {
@@ -19,7 +20,7 @@ const NavBar = ({ profile }) => {
         className="absolute right-0 top-0 py-4 px-8 shadow md:w-1/3 w-2/3 min-h-screen bg-primary"
         id="myNav">
         <button className="absolute top-0 right-0 mt-4 mr-4" onClick={closeNav}>
-          <img
+          <Image
             src="/assets/img/icon-close.svg"
             className="h-10 w-auto"
             alt=""
@@ -27,19 +28,19 @@ const NavBar = ({ profile }) => {
         </button>
         <ul className="mt-8 flex flex-col">
           <li className="py-2">
-            <Link to="#about" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+            <Link href="#about" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               About
             </Link>
           </li>
 
           <li className="py-2">
-            <Link to="#services" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+            <Link href="#services" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               Services
             </Link>
           </li>
 
           <li className="py-2">
-            <Link to="#portfolio" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+            <Link href="#portfolio" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               Portfolio
             </Link>
           </li>
@@ -49,13 +50,13 @@ const NavBar = ({ profile }) => {
 
 
           <li className="py-2">
-            <Link to="#statistics" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+            <Link href="#statistics" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               Statistics
             </Link>
           </li>
 
           <li className="py-2">
-            <Link to="#contact" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+            <Link href="#contact" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               Contact
             </Link>
           </li>
@@ -63,14 +64,14 @@ const NavBar = ({ profile }) => {
       </div>
       <div className="container flex items-center justify-between">
         <div className="flex">
-          <img src="./assets/img/favicon.png" width={35} alt="" />
+          <Image src="./assets/img/favicon.png" width={35} alt="" />
           <h1 className="text-white font-semibold text-2xl">{profile.title}</h1>
         </div>
         <div className="hidden lg:block">
           <ul className="flex items-center">
             <li className="group pl-6">
               <Link
-                to="#about"
+                href="#about"
                 className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
               >
                 About
@@ -80,7 +81,7 @@ const NavBar = ({ profile }) => {
 
             <li className="group pl-6">
               <Link
-                to="#services"
+                href="#services"
                 className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Services
@@ -91,7 +92,7 @@ const NavBar = ({ profile }) => {
 
             <li className="group pl-6">
               <Link
-                to="#portfolio"
+                href="#portfolio"
                 className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Portfolio
@@ -102,7 +103,7 @@ const NavBar = ({ profile }) => {
 
             <li className="group pl-6">
               <Link
-                to="#statistics"
+                href="#statistics"
                 className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Statistics
@@ -113,7 +114,7 @@ const NavBar = ({ profile }) => {
 
             <li className="group pl-6">
               <Link
-                to="#contact"
+                href="#contact"
                 className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
               >
                 Contact
