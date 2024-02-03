@@ -6,6 +6,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import NavBar from "../components/NavBar";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home({ skills, projects, profile }) {
   const client = createClient({
@@ -136,7 +137,7 @@ export default function Home({ skills, projects, profile }) {
           <div className="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <div className="flex flex-col items-center justify-center lg:flex-row">
               <div className="rounded-full border-8 border-primary shadow-xl">
-                <img
+                <Image
                   src={builder.image(profile.image).width(200).url()}
                   className="h-48 rounded-full sm:h-56"
                   alt="author"
@@ -156,21 +157,21 @@ export default function Home({ skills, projects, profile }) {
                     </div>
                   </div>
                   <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                    <Link to={profile.facebook} target="_blank">
+                    <Link href={profile.facebook} target="_blank">
                       <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
                     </Link>
 
-                    <Link to={profile.linkedin} target="_blank" className="pl-4">
+                    <Link href={profile.linkedin} target="_blank" className="pl-4">
                       <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
                     </Link>
                     <Link
-                      to={profile.instagram}
+                      href={profile.instagram}
                       target="_blank"
                       className="pl-4"
                     >
                       <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
                     </Link>
-                    <Link to={profile.github} target="_blank" className="pl-4">
+                    <Link href={profile.github} target="_blank" className="pl-4">
                       <i className="bx bxl-github text-2xl text-white hover:text-yellow"></i>
                     </Link>
                   </div>
@@ -202,17 +203,17 @@ export default function Home({ skills, projects, profile }) {
                   </div>
                 </div>
                 <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-                  <Link to={profile.facebook} target="_blank">
+                  <Link href={profile.facebook} target="_blank">
                     <i className="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
                   </Link>
 
-                  <Link to={profile.linkedin} target="_blank" className="pl-4">
+                  <Link href={profile.linkedin} target="_blank" className="pl-4">
                     <i className="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
                   </Link>
-                  <Link to={profile.instagram} target="_blank" className="pl-4">
+                  <Link href={profile.instagram} target="_blank" className="pl-4">
                     <i className="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
                   </Link>
-                  <Link to={profile.github} target="_blank" className="pl-4">
+                  <Link href={profile.github} target="_blank" className="pl-4">
                     <i className="bx bxl-github text-2xl text-primary hover:text-yellow"></i>
                   </Link>
                 </div>
@@ -255,13 +256,13 @@ export default function Home({ skills, projects, profile }) {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img
+                  <Image
                     src="/assets/img/icon-development-white.svg"
                     alt="development icon"
                   />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img
+                  <Image
                     src="/assets/img/icon-development-black.svg"
                     alt="development icon"
                   />
@@ -280,13 +281,13 @@ export default function Home({ skills, projects, profile }) {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img
+                  <Image
                     src="/assets/img/icon-mobile-white.svg"
                     alt="Mobile Application icon"
                   />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img
+                  <Image
                     src="/assets/img/icon-mobile-black.svg"
                     alt="Mobile Application icon"
                   />
@@ -305,13 +306,13 @@ export default function Home({ skills, projects, profile }) {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <img
+                  <Image
                     src="/assets/img/icon-graphics-white.svg"
                     alt="Graphic Design icon"
                   />
                 </div>
                 <div className="block group-hover:hidden">
-                  <img
+                  <Image
                     src="/assets/img/icon-graphics-black.svg"
                     alt="Graphic Design icon"
                   />
@@ -342,10 +343,10 @@ export default function Home({ skills, projects, profile }) {
               return (
                 <Link
                   key={project.title}
-                  to={project.url} target="_blank"
+                  href={project.url} target="_blank"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
-                  <img
+                  <Image
                     src={builder.image(project.image).url()}
                     className="w-full shadow"
                     alt="portfolio image"
@@ -432,17 +433,17 @@ export default function Home({ skills, projects, profile }) {
             Developed and Maintained by {profile.name} 2024
           </p>
           <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-            <Link to={profile.facebook} target="_blank">
+            <Link href={profile.facebook} target="_blank">
               <i className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"></i>
             </Link>
 
-            <Link to={profile.linkedin} target="_blank" className="pl-4">
+            <Link href={profile.linkedin} target="_blank" className="pl-4">
               <i className="bx bxl-linkedin text-2xl text-white hover:text-yellow"></i>
             </Link>
-            <Link to={profile.instagram} target="_blank" className="pl-4">
+            <Link href={profile.instagram} target="_blank" className="pl-4">
               <i className="bx bxl-instagram text-2xl text-white hover:text-yellow"></i>
             </Link>
-            <Link to={profile.github} target="_blank" className="pl-4">
+            <Link href={profile.github} target="_blank" className="pl-4">
               <i className="bx bxl-github text-2xl text-white hover:text-yellow"></i>
             </Link>
           </div>
