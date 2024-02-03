@@ -36,7 +36,7 @@ export default function Home({ skills, projects, profile }) {
           process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         );
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error("Error sending email:", error);
     }
   };
   const builder = imageUrlBuilder(client);
@@ -145,12 +145,12 @@ export default function Home({ skills, projects, profile }) {
               </div>
               <div className="pt-8 sm:pt-10 lg:pl-8 lg:pt-0">
                 <h1 className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl">
-                  Hello I'm {profile.name}!
+                  Hello I"m {profile.name}!
                 </h1>
                 <div className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start">
                   <div className="flex items-center justify-center pl-0 sm:justify-start md:pl-1">
                     <p className="font-body text-lg uppercase text-white">
-                      Let's connect
+                      Let"s connect
                     </p>
                     <div className="hidden sm:block">
                       <i className="bx bx-chevron-right text-3xl text-yellow"></i>
@@ -188,7 +188,7 @@ export default function Home({ skills, projects, profile }) {
                 Who am I?
               </h2>
               <h4 className="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                I'm {profile.name}, a Web Developer & Front-end Developer
+                I"m {profile.name}, a Web Developer & Front-end Developer
               </h4>
               <p className="pt-6 font-body leading-relaxed text-grey-20">
                 {profile.desc}
@@ -246,7 +246,7 @@ export default function Home({ skills, projects, profile }) {
 
         <div className="container py-16 md:py-20" id="services">
           <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-            Here's what I'm good at
+            Here"s what I"m good at
           </h2>
           <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
             These are the services I offer
@@ -335,7 +335,7 @@ export default function Home({ skills, projects, profile }) {
             Check out my Portfolio
           </h2>
           <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-            Here's what I have done with the past
+            Here"s what I have done with the past
           </h3>
 
           <div className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2">
@@ -369,7 +369,7 @@ export default function Home({ skills, projects, profile }) {
 
         <div className="container py-16 md:py-20" id="contact">
           <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-            Here's a contact form
+            Here"s a contact form
           </h2>
           <h4 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
             Have Any Questions?
@@ -422,7 +422,7 @@ export default function Home({ skills, projects, profile }) {
           <div className="container relative z-30">
             <h3 className="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl">
               Keep <span className="font-bold">up-to-date</span> <br />
-              with what I'm up to
+              with what I"m up to
             </h3>
           </div>
         </div>
