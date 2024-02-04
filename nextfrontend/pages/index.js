@@ -127,7 +127,7 @@ export default function Home({ skills, projects, profile }) {
       <div>
         <div
           className="relative bg-cover bg-center bg-no-repeat py-8"
-          style={{ backgroundimg: "url(/assets/img/bg-hero.jpg)" }}
+          style={{ backgroundimg: "../assets/img/bg-hero.jpg" }}
         >
           <div className="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"></div>
 
@@ -357,7 +357,7 @@ export default function Home({ skills, projects, profile }) {
         <div
           className="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
           style={{
-            backgroundimg: "url(/assets/img/experience-figure.png)",
+            backgroundimg: "../assets/img/experience-figure.png",
           }}
           id="statistics"
         >
@@ -414,7 +414,7 @@ export default function Home({ skills, projects, profile }) {
 
         <div
           className="relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24"
-          style={{ backgroundimg: "url(/assets/img/bg-cta.jpg)" }}
+          style={{ backgroundimg: "../assets/img/bg-cta.jpg" }}
         >
           <div className="container relative z-30">
             <h3 className="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl">
