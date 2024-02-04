@@ -10,8 +10,8 @@ import Image from "next/image";
 
 export default function Home({ skills, projects, profile }) {
   const client = createClient({
-    projectId: "spmc989j",
-    dataset: "production",
+    projectId: process.env.SANITY_API_PROJECT_ID,
+    dataset: process.env.SANITY_API_DATASET,
     useCdn: false,
     apiVersion:"v2022-03-07"
   });
