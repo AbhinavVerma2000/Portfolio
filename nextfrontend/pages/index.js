@@ -140,7 +140,7 @@ export default function Home({ skills, projects, profile }) {
 
           <div className="container relative z-30 pt-20 pb-12 sm:pt-56 sm:pb-48 lg:pt-64 lg:pb-48">
             <div className="flex flex-col items-center justify-center lg:flex-row">
-              <div className="rounded-full border-8 border-primary shadow-xl">
+              <div className="rounded-full border-8 border-primary shadow-xl" style={{ backgroundImage: builder.image(profile.image).width(200).url() }}>
                 <Image
                   src={builder.image(profile.image).width(200).url()}
                   className="h-48 rounded-full sm:h-56"
