@@ -398,7 +398,7 @@ export default function Home({ skills, projects, profile }) {
                 required
               />
             </div>
-            <textareLink
+            <textarea
               className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
               placeholder="Message"
               id="message"
@@ -406,7 +406,7 @@ export default function Home({ skills, projects, profile }) {
               rows="10"
               value={message} onChange={(e) => setMessage(e.target.value)}
               required
-            ></textareLink>
+            ></textarea>
             <button className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20">
               Send
               <i className="bx bx-chevron-right relative -right-2 text-3xl"></i>
