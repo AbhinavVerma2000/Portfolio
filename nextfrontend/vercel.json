@@ -1,8 +1,0 @@
-{
-    "rewrites": [
-      {
-        "source": "https://portfolio-blue-chi-24.vercel.app/:match*",
-        "destination": ":match*"
-      }
-    ]
-  }
