@@ -7,12 +7,6 @@
           "port": "",
           "pathname": "/images/spmc989j/production/"
         }
-      ],
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/"
-      }
-    ]
+      ]
   }
 }
