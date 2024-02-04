@@ -44,14 +44,6 @@ export default function Home({ skills, projects, profile }) {
     }
   };
   const builder = imageUrlBuilder(client);
-  //const profile = {
-  //   title: "WorkWithHarry",
-  //   name: "Harry",
-  //   image: "https://insanebiography.com/wp-content/uploads/codewithharry_108099807_133124151765153_6863548870509034899_n-min-edited.jpg",
-  //   fbLink: "https://facebook.com/codewithharry",
-  //   twitterLink: "https://twitter.com/codewithharry",
-  //   instagramLink: "https://instagram.com/codewithharry",
-  // }
 
   return (
     <>
