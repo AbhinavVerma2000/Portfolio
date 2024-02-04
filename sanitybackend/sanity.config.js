@@ -9,6 +9,12 @@ export default defineConfig({
 
   projectId: 'spmc989j',
   dataset: 'production',
+  cors: [
+    {
+      "origin": "https://portfolio-q1as.vercel.app/",
+      "maxAge": 86400 // Adjust as needed
+    }
+  ],
 
   plugins: [structureTool(), visionTool()],
 
