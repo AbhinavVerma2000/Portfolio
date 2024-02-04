@@ -1,9 +1,15 @@
 {
     "builds": [
       {
-        "src": "public/**/*",
+        "src": "public/assets/img",
         "use": "@vercel/static"
       }
+    ],
+    "routes":[
+        {
+            "src":"public/assets/img",
+            "dest":"/"
+        }
     ]
   }
   
