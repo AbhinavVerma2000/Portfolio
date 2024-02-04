@@ -62,7 +62,7 @@ const NavBar = ({ profile }) => {
       </div>
       <div className="container flex items-center justify-between">
         <div className="flex">
-          <img src="./assets/img/favicon.png" width={35} alt="" />
+          <img src="../assets/img/favicon.png" width={35} alt="" />
           <h1 className="text-white font-semibold text-2xl">{profile.title}</h1>
         </div>
         <div className="hidden lg:block">
