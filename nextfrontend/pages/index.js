@@ -342,7 +342,7 @@ export default function Home({ skills, projects, profile }) {
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
                   <img
-                    src={builder.img(project.img).url()}
+                    src={builder.image(project.image).url()}
                     className="w-full shadow"
                     alt="portfolio img"
                   />
