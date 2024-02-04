@@ -1,8 +1,18 @@
 {
-    "rewrites": [
+  "images": {
+    "remotePatterns": [
         {
-            "source": "/(.*)",
-            "destination": "/"
+          "protocol": "https",
+          "hostname": "cdn.sanity.io",
+          "port": "",
+          "pathname": "/images/spmc989j/production/"
         }
+      ],
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
     ]
+  }
 }
