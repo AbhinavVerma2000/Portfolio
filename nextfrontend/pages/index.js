@@ -2,10 +2,9 @@ import Head from "next/head";
 import { useState } from "react";
 import { createClient } from "next-sanity";
 import Script from "next/script";
-import imageUrlBuilder from "@sanity/image-url";
+import imgUrlBuilder from "@sanity/img-url";
 import NavBar from "../components/NavBar";
 import emailjs from "@emailjs/browser";
-import Image from "next/image";
 import Link from "next/link";
 export default function Home({ skills, projects, profile }) {
   const client = createClient({
@@ -43,7 +42,7 @@ export default function Home({ skills, projects, profile }) {
       console.error('Error sending email:', error);
     }
   };
-  const builder = imageUrlBuilder(client);
+  const builder = imgUrlBuilder(client);
 
   return (
     <>
@@ -70,15 +69,15 @@ export default function Home({ skills, projects, profile }) {
 
 
 
-        <link rel="icon" type="image/png" href="/assets/img/favicon.png" />
+        <link rel="icon" type="img/png" href="/assets/img/favicon.png" />
 
         <meta name="theme-color" content="#5540af" />
 
         <meta property="og:site_name" content="Atom Template" />
 
-        <meta property="og:image" content="//assets/img/social.jpg" />
+        <meta property="og:img" content="//assets/img/social.jpg" />
 
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_img" />
 
         <meta name="twitter:site" content="@tailwindmade" />
 
@@ -126,7 +125,7 @@ export default function Home({ skills, projects, profile }) {
       <div>
         <div
           className="relative bg-cover bg-center bg-no-repeat py-8"
-          style={{ backgroundImage: "url(/assets/img/bg-hero.jpg)" }}
+          style={{ backgroundimg: "url(/assets/img/bg-hero.jpg)" }}
         >
           <div className="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"></div>
 
@@ -134,7 +133,7 @@ export default function Home({ skills, projects, profile }) {
             <div className="flex flex-col items-center justify-center lg:flex-row">
               <div className="rounded-full border-8 border-primary shadow-xl">
                 <img
-                  src={builder.image(profile.image).width(200).url()}
+                  src={builder.img(profile.img).width(200).url()}
                   className="h-48 rounded-full sm:h-56"
                   alt="author"
                 />
@@ -252,13 +251,13 @@ export default function Home({ skills, projects, profile }) {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <Image
+                  <img
                     src="/assets/img/icon-development-white.svg"
                     alt="development icon"
                   />
                 </div>
                 <div className="block group-hover:hidden">
-                  <Image
+                  <img
                     src="/assets/img/icon-development-black.svg"
                     alt="development icon"
                   />
@@ -277,13 +276,13 @@ export default function Home({ skills, projects, profile }) {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <Image
+                  <img
                     src="/assets/img/icon-mobile-white.svg"
                     alt="Mobile Application icon"
                   />
                 </div>
                 <div className="block group-hover:hidden">
-                  <Image
+                  <img
                     src="/assets/img/icon-mobile-black.svg"
                     alt="Mobile Application icon"
                   />
@@ -302,13 +301,13 @@ export default function Home({ skills, projects, profile }) {
             <div className="group rounded px-8 py-12 shadow hover:bg-primary">
               <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                 <div className="hidden group-hover:block">
-                  <Image
+                  <img
                     src="/assets/img/icon-graphics-white.svg"
                     alt="Graphic Design icon"
                   />
                 </div>
                 <div className="block group-hover:hidden">
-                  <Image
+                  <img
                     src="/assets/img/icon-graphics-black.svg"
                     alt="Graphic Design icon"
                   />
@@ -342,10 +341,10 @@ export default function Home({ skills, projects, profile }) {
                   href={project.url} target="_blank"
                   className="mx-auto transform transition-all hover:scale-105 md:mx-0"
                 >
-                  <Image
-                    src={builder.image(project.image).url()}
+                  <img
+                    src={builder.img(project.img).url()}
                     className="w-full shadow"
-                    alt="portfolio image"
+                    alt="portfolio img"
                   />
                 </Link>
               );
@@ -356,7 +355,7 @@ export default function Home({ skills, projects, profile }) {
         <div
           className="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
           style={{
-            backgroundImage: "url(/assets/img/experience-figure.png)",
+            backgroundimg: "url(/assets/img/experience-figure.png)",
           }}
           id="statistics"
         >
@@ -413,7 +412,7 @@ export default function Home({ skills, projects, profile }) {
 
         <div
           className="relative bg-primary bg-cover bg-center bg-no-repeat py-16 bg-blend-multiply lg:py-24"
-          style={{ backgroundImage: "url(/assets/img/bg-cta.jpg)" }}
+          style={{ backgroundimg: "url(/assets/img/bg-cta.jpg)" }}
         >
           <div className="container relative z-30">
             <h3 className="text-center font-header text-3xl uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-5xl">
