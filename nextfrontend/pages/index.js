@@ -12,6 +12,7 @@ export default function Home({ skills, projects, profile }) {
     projectId: "spmc989j",
     dataset: "production",
     useCdn: false,
+    apiVersion: "v2022-03-07"
   });
 
   const [user, setUser] = useState("");
