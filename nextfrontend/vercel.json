@@ -1,12 +1,1 @@
-{
-  "images": {
-    "remotePatterns": [
-        {
-          "protocol": "https",
-          "hostname": "cdn.sanity.io",
-          "port": "",
-          "pathname": "/images/spmc989j/production/"
-        }
-      ]
-  }
-}
+
