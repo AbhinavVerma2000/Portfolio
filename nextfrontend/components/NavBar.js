@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 const NavBar = ({ profile }) => {
@@ -19,7 +18,7 @@ const NavBar = ({ profile }) => {
         className="absolute right-0 top-0 py-4 px-8 shadow md:w-1/3 w-2/3 min-h-screen bg-primary"
         id="myNav">
         <button className="absolute top-0 right-0 mt-4 mr-4" onClick={closeNav}>
-          <Image
+          <img
             src="/assets/img/icon-close.svg"
             className="h-10 w-auto"
             alt=""
@@ -63,7 +62,7 @@ const NavBar = ({ profile }) => {
       </div>
       <div className="container flex items-center justify-between">
         <div className="flex">
-          <Image src="./assets/img/favicon.png" width={35} alt="" />
+          <img src="./assets/img/favicon.png" width={35} alt="" />
           <h1 className="text-white font-semibold text-2xl">{profile.title}</h1>
         </div>
         <div className="hidden lg:block">
