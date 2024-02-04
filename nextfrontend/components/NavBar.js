@@ -47,11 +47,7 @@ const NavBar = ({ profile }) => {
 
 
 
-          <li className="py-2">
-            <Link href="#statistics" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
-              Statistics
-            </Link>
-          </li>
+
 
           <li className="py-2">
             <Link href="#contact" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
@@ -99,16 +95,7 @@ const NavBar = ({ profile }) => {
               <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
 
-            <li className="group pl-6">
-              <Link
-                href="#statistics"
-                className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-              >
-                Statistics
-              </Link>
-
-              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
-            </li>
+            
 
             <li className="group pl-6">
               <Link
