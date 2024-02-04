@@ -28,7 +28,7 @@ const NavBar = ({ profile }) => {
         </button>
         <ul className="mt-8 flex flex-col">
           <li className="py-2">
-            <Link to="#about" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+            <Link href="#about" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               About
             </Link>
           </li>
