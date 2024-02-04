@@ -52,7 +52,6 @@ export default function Home({ skills, projects, profile }) {
 
   return (
     <>
-      <Script src="/assets/js/main.js"></Script>
       <Head>
         <meta charset="utf-8" />
 
