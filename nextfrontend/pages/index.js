@@ -35,6 +35,10 @@ export default function Home({ skills, projects, profile }) {
           templateParams,
           process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         );
+      setUser("");
+      setEmail("");
+      setMessage("");
+      alert("Mail sent Successfully")
     } catch (error) {
       console.error('Error sending email:', error);
     }
