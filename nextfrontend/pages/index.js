@@ -142,7 +142,7 @@ export default function Home({ skills, projects, profile }) {
             <div className="flex flex-col items-center justify-center lg:flex-row">
               <div className="rounded-full border-8 border-primary shadow-xl">
                 <Image
-                  src={builder.image(profile.image).width(200).url()}
+                  src="https://cdn.sanity.io/images/spmc989j/production/6d737515fb0566b7be54834e4a621499d7446e0d-518x487.jpg"
                   className="h-48 rounded-full sm:h-56"
                   alt="author"
                 />
