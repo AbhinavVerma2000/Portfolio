@@ -6,7 +6,7 @@ export default defineCliConfig({
     dataset: 'production',
     cors: [
       {
-        "origin": "https://portfolio-fawn-three-23.vercel.app/",
+        "origin": "https://portfolio-q1as.vercel.app/",
         "maxAge": 86400 // Adjust as needed
       }
     ]
