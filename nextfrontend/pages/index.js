@@ -60,7 +60,7 @@ export default function Home({ skills, projects, profile }) {
 
         <title>{profile.name} - Developer | Coder | Software Geek</title>
 
-        <meta property="og:title" content="Homepage | Atom Template" />
+        <meta property="og:title" content="Homepage" />
 
         <meta property="og:locale" content="en_US" />
 
@@ -134,7 +134,7 @@ export default function Home({ skills, projects, profile }) {
             <div className="flex flex-col items-center justify-center lg:flex-row">
               <div className="rounded-full border-8 border-primary shadow-xl">
                 <Image
-                  src={builder.image(profile.image).width(200).url()}
+                  src="Screenshot (225).png"
                   className="h-48 rounded-full sm:h-56"
                   alt="author"
                 />
