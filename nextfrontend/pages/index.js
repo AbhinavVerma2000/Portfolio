@@ -2,10 +2,12 @@ import Head from "next/head";
 import { useState } from "react";
 import { createClient } from "next-sanity";
 import Script from "next/script";
-import imgUrlBuilder from "@sanity/img-url";
+import imageUrlBuilder from '@sanity/image-url'
 import NavBar from "../components/NavBar";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
+
+
 export default function Home({ skills, projects, profile }) {
   const client = createClient({
     projectId: "spmc989j",
@@ -42,7 +44,7 @@ export default function Home({ skills, projects, profile }) {
       console.error('Error sending email:', error);
     }
   };
-  const builder = imgUrlBuilder(client);
+  const builder = imageUrlBuilder(client);
 
   return (
     <>
