@@ -5,15 +5,13 @@ import Script from "next/script";
 import imageUrlBuilder from "@sanity/image-url";
 import NavBar from "../components/NavBar";
 import emailjs from "@emailjs/browser";
-import Link from "next/link";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home({ skills, projects, profile }) {
   const client = createClient({
-    projectId: process.env.SANITY_API_PROJECT_ID,
-    dataset: process.env.SANITY_API_DATASET,
+    projectId: "spmc989j",
+    dataset: "production",
     useCdn: false,
-    apiVersion:"v2022-03-07"
   });
 
   const [user, setUser] = useState("");
@@ -37,7 +35,7 @@ export default function Home({ skills, projects, profile }) {
           process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         );
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error('Error sending email:', error);
     }
   };
   const builder = imageUrlBuilder(client);
@@ -52,6 +50,7 @@ export default function Home({ skills, projects, profile }) {
 
   return (
     <>
+      <Script src="/assets/js/main.js"></Script>
       <Head>
         <meta charset="utf-8" />
 
