@@ -75,7 +75,7 @@ export default function Home({ skills, projects, profile }) {
 
         <meta name="theme-color" content="#5540af" />
 
-        <meta property="og:site_name" content="Atom Template" />
+        <meta property="og:site_name" content="Abhinav's Portfolio" />
 
         <meta property="og:img" content="//assets/img/social.jpg" />
 
