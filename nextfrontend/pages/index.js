@@ -476,10 +476,10 @@ export async function getServerSideProps(context) {
     dataset: "production",
     useCdn: false,
   });
-  const kquery = `*[_type == "knowledge"][0...12]`;
+  const kquery = `*[_type == "knowledge"]`;
   const skills = await client.fetch(kquery);
 
-  const query = `*[_type == "project"][0...6]`;
+  const query = `*[_type == "project"]`;
   const projects = await client.fetch(query);
 
   const profileQuery = `*[_type == "profile"][0]`;
