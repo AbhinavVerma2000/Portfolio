@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
 
 const NavBar = ({ profile }) => {
 
+  const ref = useRef()
+
   const closeNav=()=>{
-    document.getElementById("myNav").style.visibility="hidden";
     document.querySelector('html').style.overflow="visible";
+    ref.current.classList.remove("translate-x-0");
+      ref.current.classList.add("translate-x-full");
   }
   const openNav=()=>{
-    document.getElementById("myNav").style.visibility="visible";
     document.querySelector('html').style.overflow="hidden";
+    ref.current.classList.remove("translate-x-full");
+      ref.current.classList.add("translate-x-0");
   }
 
   return (
     <div className="w-full z-50 top-0 py-3 sm:py-5  absolute">
-      <div style={{visibility: "hidden"}}
-        className="absolute right-0 top-0 py-4 px-8 shadow md:w-1/3 w-2/3 min-h-screen bg-primary"
+      <div ref={ref}
+        className="fixed right-0 top-0 py-4 px-8 shadow md:w-1/3 w-2/3 min-h-screen bg-primary transform transition-transform translate-x-full"
         id="myNav">
         <button className="absolute top-0 right-0 mt-4 mr-4" onClick={closeNav}>
           <img
