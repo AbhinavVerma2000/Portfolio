@@ -358,7 +358,7 @@ export default function Home({ skills, projects, profile, experience }) {
             My work experience
           </h2>
           <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-            Here&apos;s what I did before freelancing
+            Here&apos;s what I did till now
           </h3>
           {experience.map((work)=>{return (<div key={work.title} class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
             <span class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"></span>
