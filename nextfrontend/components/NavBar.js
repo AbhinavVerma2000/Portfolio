@@ -46,13 +46,11 @@ const NavBar = ({ profile }) => {
               Portfolio
             </Link>
           </li>
-
-
-
-
-
-
-
+          <li className="py-2">
+            <Link href="#work" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
+              Work
+            </Link>
+          </li>
           <li className="py-2">
             <Link href="#contact" className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white" onClick={closeNav}>
               Contact
@@ -60,6 +58,9 @@ const NavBar = ({ profile }) => {
           </li>
         </ul>
       </div>
+
+
+
       <div className="container flex items-center justify-between">
         <div className="flex">
           <img src="../assets/img/favicon.png" width={35} alt="" />
@@ -98,9 +99,16 @@ const NavBar = ({ profile }) => {
 
               <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
             </li>
+            <li className="group pl-6">
+              <Link
+                href="#work"
+                className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+              >
+                Work
+              </Link>
 
-            
-
+              <span className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"></span>
+            </li>
             <li className="group pl-6">
               <Link
                 href="#contact"
