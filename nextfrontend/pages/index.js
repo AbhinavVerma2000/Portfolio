@@ -6,6 +6,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import NavBar from "../components/NavBar";
 import emailjs from "@emailjs/browser";
 import Link from "next/link";
+import { useRef } from "react";
 
 
 export default function Home({ skills, projects, profile, experience }) {
@@ -18,6 +19,20 @@ export default function Home({ skills, projects, profile, experience }) {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  
+  const ref = useRef()
+  const k = useRef()
+  const openClose=()=>{
+    if(ref.current.classList.contains("rotate-90")){
+      ref.current.classList.remove("rotate-90");
+      k.current.classList.add("hidden")
+    }
+    else{
+      ref.current.classList.add("rotate-90");
+      k.current.classList.remove("hidden")
+    }
+    
+  }
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -82,34 +97,7 @@ export default function Home({ skills, projects, profile, experience }) {
 
         <meta name="twitter:site" content="@tailwindmade" />
 
-        <link
-          crossOrigin="crossorigin"
-          href="https://fonts.gstatic.com"
-          rel="preconnect"
-        />
-
-        <link
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-          rel="preload"
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-
-        <link
-          href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-          rel="stylesheet"
-        />
-
-        <link
-          crossOrigin="anonymous"
-          href="/assets/styles/main.min.css"
-          media="screen"
-          rel="stylesheet"
-        />
+        
 
         <script
           defer
@@ -352,47 +340,55 @@ export default function Home({ skills, projects, profile, experience }) {
             })}
           </div>
         </div>
-        <div class="container py-16 md:py-20" id="work">
-          <h2 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
+        <div className="container py-16 md:py-20" id="work">
+          <h2 className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
             My work experience
           </h2>
-          <h3 class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
+          <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
             Here&apos;s what I did till now
           </h3>
-          {experience.map((work)=>{return (<div key={work.title} class="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
-            <span class="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"></span>
+          {experience.map((work)=>{return (<div key={work.title} className="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
+            <span className="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"></span>
 
-            <div class="mt-8 flex flex-col text-center md:flex-row md:text-left">
-              <div class="md:w-2/5">
-                <div class="flex justify-center md:justify-start">
-                  <span class="shrink-0">
+            <div className="mt-8 flex flex-col text-center md:flex-row md:text-left">
+              <div className="md:w-2/5">
+                <div className="flex justify-center md:justify-start">
+                  <span className="shrink-0">
                     <img
                       src={builder.image(work.logo).url()}
-                      class="h-auto w-32"
+                      className="h-auto w-32"
                       alt="company logo"
                     />
                   </span>
-                  <div class="relative ml-3 hidden w-full md:block">
-                    <span class="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"></span>
+                  <div className="relative ml-3 hidden w-full md:block">
+                    <span className="absolute inset-x-0 top-1/2 h-0.5 -translate-y-1/2 transform bg-grey-70"></span>
                   </div>
                 </div>
               </div>
-              <div class="md:w-3/5">
-                <div class="relative flex md:pl-18">
-                  <span class="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"></span>
+              <div className="md:w-3/5">
+                <div className="relative flex md:pl-18">
+                  <span className="absolute left-8 top-1 hidden h-4 w-4 rounded-full border-2 border-grey-40 bg-white md:block"></span>
 
-                  <div class="mt-1 flex">
-                    <i class="bx bxs-right-arrow hidden text-primary md:block"></i>
-                    <div class="md:-mt-1 md:pl-8">
-                      <span class="block font-body font-bold text-grey-40">
+                  <div className="mt-1 flex">
+                    <div><i ref={ref} onClick={()=>openClose()} className="bx bxs-right-arrow hidden text-primary md:block transition-all ease cursor-pointer"></i></div>
+                    <div className="md:-mt-1 md:pl-8">
+                      <span className="block font-body font-bold text-grey-40">
                         {work.interval}
                       </span>
-                      <span class="block pt-2 font-header text-xl font-bold uppercase text-primary">
+                      <span className="block pt-2 font-header text-xl font-bold uppercase text-primary">
                         {work.title}
                       </span>
-                      <div class="pt-2">
-                        <span class="block font-body text-black">
-                          {work.desc[0]}
+                      <div ref={k} className="pt-2 hidden transition-all 2s ease">
+                        <span  className="block font-body text-black text-sm">
+                          <ul className="list-disc">
+                          {work.desc.map((element, index)=>{
+                            console.log(element, index)
+                            return (
+                              <li key={index}>{element}</li>
+                            )
+                          })}
+                          </ul>
+                          
                         </span>
                       </div>
                     </div>
