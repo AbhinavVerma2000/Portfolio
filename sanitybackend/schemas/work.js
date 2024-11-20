@@ -18,7 +18,7 @@ export default {
             type: 'array',
             of: [
                 {
-                  type: 'block'
+                  type: 'string'
                 }
               ],
             title: 'About',
