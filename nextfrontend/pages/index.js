@@ -15,7 +15,6 @@ export default function Home({ skills, projects, profile, experience }) {
     useCdn: false,
     apiVersion: "v2022-03-07"
   });
-
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
