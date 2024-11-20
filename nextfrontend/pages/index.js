@@ -392,7 +392,7 @@ export default function Home({ skills, projects, profile, experience }) {
                       </span>
                       <div class="pt-2">
                         <span class="block font-body text-black">
-                          {work.desc}
+                          {work.desc[0]}
                         </span>
                       </div>
                     </div>
@@ -530,7 +530,7 @@ export async function getServerSideProps(context) {
   const kquery = `*[_type == "knowledge"]`;
   const skills = await client.fetch(kquery);
 
-  const wquery = `*[_type == "work"][0]`;
+  const wquery = `*[_type == "work"]`;
   const experience = await client.fetch(wquery);
 
   const query = `*[_type == "project"]`;
