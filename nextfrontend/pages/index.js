@@ -382,7 +382,6 @@ export default function Home({ skills, projects, profile, experience }) {
                         <span  className="block font-body text-black text-sm">
                           <ul className="list-disc">
                           {work.desc.map((element, index)=>{
-                            console.log(element, index)
                             return (
                               <li key={index}>{element}</li>
                             )
