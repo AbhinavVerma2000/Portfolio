@@ -15,7 +15,12 @@ export default {
         },
         {
             name: 'desc',
-            type: 'string',
+            type: 'array',
+            of: [
+                {
+                  type: 'block'
+                }
+              ],
             title: 'About',
         },
         {
