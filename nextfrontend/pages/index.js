@@ -530,7 +530,7 @@ export async function getServerSideProps(context) {
   const kquery = `*[_type == "knowledge"]`;
   const skills = await client.fetch(kquery);
 
-  const wquery = `*[_type == "work"]`;
+  const wquery = `*[_type == "work"][0]`;
   const experience = await client.fetch(wquery);
 
   const query = `*[_type == "project"]`;
