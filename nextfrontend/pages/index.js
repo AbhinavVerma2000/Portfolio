@@ -347,7 +347,7 @@ export default function Home({ skills, projects, profile, experience }) {
           <h3 className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
             Here&apos;s what I did till now
           </h3>
-          {experience.map((work)=>{return (<div key={work.title} className="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
+          {experience.map((work)=>{return (<div key={work.title} className="relative mx-auto flex w-full flex-col lg:w-2/3">
             <span className="left-2/5 absolute inset-y-0 ml-10 hidden w-0.5 bg-grey-40 md:block"></span>
 
             <div className="mt-8 flex flex-col text-center md:flex-row md:text-left">
